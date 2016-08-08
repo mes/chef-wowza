@@ -1,5 +1,5 @@
-chef-wowza cookbook for Wowza 4.4.1
-===================
+chef-wowza cookbook for Wowza 4.5.0 on Ubuntu 16.04
+===================================================
 This cookbook automates the installation of the Wowza Media Server 4.4.1, including their installer, which contains a very long EULA, and 7 interactive prompts.
 
 ![chef-wowza](https://github.com/msergiy87/chef-wowza/blob/master/chef-wowza.jpg)
@@ -8,13 +8,13 @@ Requirements
 ------------
 - Java jdk - openjdk will be just fine.
 - Wowza license - this you will get when you sign up for a free trial, or you can request a developer license.
-- Wowza binary - the Wowza binary (4.4.1) is now wgetted as part of this role.
+- Wowza binary - the Wowza binary (4.5.0) is now wgetted as part of this role.
 
 Attributes
 ------------
 ```
-default['wowza_file'] = "WowzaStreamingEngine-4.4.1-linux-x64-installer.run"
-default['wowza_download_path'] = "http://www.wowza.com/downloads/WowzaStreamingEngine-4-4-1"
+default['wowza_file'] = "WowzaStreamingEngine-4.5.0-linux-x64-installer.run"
+default['wowza_download_path'] = "http://www.wowza.com/downloads/WowzaStreamingEngine-4-5-0"
 default['user_name'] = "admin"
 default['password'] = "admin"
 default['license_key'] = "insert key between quotations"
@@ -22,7 +22,7 @@ default['license_key'] = "insert key between quotations"
 
 Distros tested
 ----------
-Currently, this is only tested on Centos 6.7 as a client machine and Ubuntu 14.04 as a server machime.
+Currently, this is only tested on Centos 6.7 as a client machine and Ubuntu 16.04 as a server machime.
 
 Wait a minute, what the hell is Wowza?
 ------------

@@ -14,12 +14,10 @@ wowza_download_path = node['wowza_download_path']
 #backup_dir = "/var/backup/#{node['hostname']}"
 
 # Upgrade
-execute 'yum update -y' do
-  command 'yum update -y'
-end
+include_recipe "apt" # forces apt-get update
 
 # Install OpenJDK JDK, expect
-package ['java-1.8.0-openjdk-devel', 'expect'] do
+package ['openjdk-8-jdk', 'expect'] do
   action :install
 end
 
